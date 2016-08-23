@@ -413,8 +413,8 @@ module Escaping : sig
 end
 
 
-external unsafe_get : string -> int -> char         = "%string_unsafe_get"
-external unsafe_set : string -> int -> char -> unit = "%string_unsafe_set"
+external unsafe_get : string -> int -> char         = "%bytes_unsafe_get"
+external unsafe_set : string -> int -> char -> unit = "%bytes_unsafe_set"
 
 (** Note that [string] is already stable by itself, since as a primitive type it is an
     integral part of the sexp / bin_io protocol. [String.Stable] exists only to introduce

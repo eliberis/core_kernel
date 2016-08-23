@@ -25,11 +25,11 @@ include Quickcheckable.S with type t := t
 (** Maximum length of a string. *)
 val max_length : int
 
-external length : t -> int = "%string_length"
-external get : t -> int -> char = "%string_safe_get"
-external set : t -> int -> char -> unit = "%string_safe_set"
+external length : t -> int = "%bytes_length"
+external get : t -> int -> char = "%bytes_safe_get"
+external set : t -> int -> char -> unit = "%bytes_safe_set"
 
-external create : int -> t = "caml_create_string"
+external create : int -> t = "caml_create_bytes"
 val make : int -> char -> t
 val copy : t -> t
 val init : int -> f:(int -> char) -> t
